@@ -1,0 +1,33 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Q27866 {
+
+	
+	private Scanner keyboard;
+	private String s;
+	private int i;
+	
+	public Q27866() {
+		this.keyboard = new Scanner(System.in);
+	}
+	
+	public void startQ() {
+		System.out.println("퀴즈가 시작되었습니다");
+		System.out.println("단어를 입력해주세요");
+		this.s = this.keyboard.nextLine();
+		System.out.println("몇 번째 글자를 출력할까요?");
+		this.i = Integer.parseInt(this.keyboard.nextLine());
+		String j = this.s.charAt(i - 1)+"";
+		System.out.println(j);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Q27866 q27866 = new Q27866();
+		q27866.startQ();
+	}
+	
+}

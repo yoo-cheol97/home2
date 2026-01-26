@@ -1,0 +1,18 @@
+package exam;
+
+public class Q181842 {
+	
+	public static int solution(String str1, String str2) {
+		if (str2.contains(str1)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	 public static void main(String[] args) {
+	        System.out.println("abc" + "aabcc" + solution("abc", "aabcc"));  
+	        System.out.println("tbt" + "tbbttb" + solution("tbt", "tbbttb")); 
+	    }
+	
+
+}

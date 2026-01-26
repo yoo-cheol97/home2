@@ -1,0 +1,12 @@
+package exam;
+
+public class Q181845 {
+	
+	public static void main(Stringp[ args]) {
+		
+		int n = 12312332;
+		System.out.println(n + "");
+		
+	}
+
+}
