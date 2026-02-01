@@ -22,6 +22,10 @@ public class Customer {
 		this.drunkenLevel = drunkenLevel;
 	}
 	
+	public void order(Customer customer, Restaurant restaurant, Menu menu) {
+		order.makeOrder(customer, restaurant, menu);
+	}
+	
 	public String getName() {
 		return name;
 	}

@@ -1,5 +1,11 @@
 package homework;
 
+import homework.exception.DrunkenException;
+import homework.exception.FullException;
+import homework.exception.NotEnoughMoneyException;
+import homework.exception.SoldoutException;
+
+
 public class Restaurant {
 
 	private String name;
@@ -80,4 +86,14 @@ public class Restaurant {
 		}
 		
 	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 }

@@ -1,5 +1,10 @@
 package homework;
 
+import homework.exception.DrunkenException;
+import homework.exception.FullException;
+import homework.exception.NotEnoughMoneyException;
+import homework.exception.SoldoutException;
+
 public class RestaurantTest {
 	public static void main(String[]args) {
 	
@@ -11,8 +16,39 @@ public class RestaurantTest {
 		
 		//String menuName, int menuPrice, int menuFull, String alcoName, int alcoPrice, int alcoFull
 		
-		rest.customerOrder(1, 2, 2);
-		rest.customerOrder(2, 1, 2);
+		try {
+			order.makeOrder(1, 1, 1);
+		}
+		catch(DrunkenException dx) {
+			System.out.println(dx.getMessage());
+		}
+		catch(FullException fe) {
+			System.out.println(fe.getMessage());
+		}
+		catch(NotEnoughMoneyException neme) {
+			System.out.println(neme.getMessage());
+		}
+		catch(SoldoutException se) {
+			System.out.println(se.getMessage());
+		}
+		
+		try {
+			order.makeOrder(2, 2, 2);
+		}
+		catch(DrunkenException dx) {
+			System.out.println(dx.getMessage());
+		}
+		catch(FullException fe) {
+			System.out.println(fe.getMessage());
+		}
+		catch(NotEnoughMoneyException neme) {
+			System.out.println(neme.getMessage());
+		}
+		catch(SoldoutException se) {
+			System.out.println(se.getMessage());
+		}
+			
+	}
 	
 
 }

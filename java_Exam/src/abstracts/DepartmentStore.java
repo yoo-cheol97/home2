@@ -42,11 +42,11 @@ public class DepartmentStore extends AbstractMart {
 	public int discount(Guest guest, int amount) {
 		int discountM = 0;
 		
-		if(guest instanceof Guest) {
-			discountM = (int)(amount * 0.03);
-		}
-		else if(guest instanceof VVIP) {
+		if(guest instanceof VVIP) {
 			discountM = (int)(amount * 0.1);
+		}
+		else if(guest instanceof VIP) {
+			discountM = (int)(amount * 0.03);
 		}
 		return discountM;
 		

@@ -45,7 +45,8 @@ public abstract class AbstractMart {
 		this.safe += money - this.remainMoney;
 		System.out.println("총 액: " + this.safe + "원");
 		System.out.println("거슬러 줄 돈: " + this.remainMoney + "원");
-		
+		this.safe = 0; // 추가
+	
 		// 마트가 손님에게 거슬러 준다
 		guest.giveMoney(this.remainMoney); 
 		this.remainMoney = 0;
