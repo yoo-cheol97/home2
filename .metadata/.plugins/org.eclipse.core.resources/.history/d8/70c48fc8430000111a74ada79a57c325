@@ -1,0 +1,90 @@
+package airplane;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Seats {
+	
+	private static void printAirplaneName(Map<Integer, List<AirplaneName>> seat, int i, int j) {
+		List<AirplaneName> airplane = seat.get(i);
+		List<AirplaneName> airplane2 = seat.get(j);
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("비행기 편의 이름을 입력하세요: ");
+		String input = scanner.nextLine();
+		
+		if (input.equals("0001")) {
+			System.out.println("0001편은 존재하지 않습니다.");
+			System.out.println("다른 비행기 편의 이름을 입력하세요: ");
+		}
+		else if(input.equals("0002")) {
+			System.out.println("0002편의 좌석 현황입니다" + ("O: 예약 가능, X: 예약 불가능"));
+			for(i = 0; i < 10; i++) {
+				System.out.println(seat.get(i));
+			}
+		}
+		else if(input.equals("0003")) {
+			System.out.println("0003편의 좌석 현황입니다" + ("O: 예약 가능, X: 예약 불가능"));
+			for(j = 0; j < 10; j++) {
+				System.out.println(seat.get(j));
+			}
+		}
+		
+		
+	}
+	
+	public static void main(String[] args) {
+	
+		Map<Integer, List<AirplaneName>> seat = new HashMap<>();
+		
+		seat.put(0002, new ArrayList<>());
+		seat.put(0003, new ArrayList<>());
+		
+		List<AirplaneName> airplane = seat.get(0002);
+		airplane.add(new AirplaneName(1, "O"));
+		airplane.add(new AirplaneName(2, "O"));
+		airplane.add(new AirplaneName(3, "O"));
+		airplane.add(new AirplaneName(4, "O"));
+		airplane.add(new AirplaneName(5, "X"));
+		airplane.add(new AirplaneName(6, "O"));
+		airplane.add(new AirplaneName(7, "O"));
+		airplane.add(new AirplaneName(8, "O"));
+		airplane.add(new AirplaneName(9, "O"));
+		
+		printAirplaneName(seat, 1);
+		printAirplaneName(seat, 2);
+		printAirplaneName(seat, 3);
+		printAirplaneName(seat, 4);
+		printAirplaneName(seat, 5);
+		printAirplaneName(seat, 6);
+		printAirplaneName(seat, 7);
+		printAirplaneName(seat, 8);
+		printAirplaneName(seat, 9);
+		
+		List<AirplaneName> airplane2 = seat.get(0003);
+		airplane.add(new AirplaneName(1, "X"));
+		airplane.add(new AirplaneName(2, "X"));
+		airplane.add(new AirplaneName(3, "X"));
+		airplane.add(new AirplaneName(4, "X"));
+		airplane.add(new AirplaneName(5, "X"));
+		airplane.add(new AirplaneName(6, "X"));
+		airplane.add(new AirplaneName(7, "X"));
+		airplane.add(new AirplaneName(8, "X"));
+		airplane.add(new AirplaneName(9, "X"));
+		
+		printAirplaneName(seat, 1);
+		printAirplaneName(seat, 2);
+		printAirplaneName(seat, 3);
+		printAirplaneName(seat, 4);
+		printAirplaneName(seat, 5);
+		printAirplaneName(seat, 6);
+		printAirplaneName(seat, 7);
+		printAirplaneName(seat, 8);
+		printAirplaneName(seat, 9);
+			
+	}
+}
